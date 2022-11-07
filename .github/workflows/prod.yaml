@@ -1,0 +1,23 @@
+---
+
+name: Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deliver:
+    runs-on: 
+      - self-hosted
+      - production
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+
+      - name: Start
+        run: |
+          docker compose build
+          docker compose down
+          docker compose up -d

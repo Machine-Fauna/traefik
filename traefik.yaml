@@ -1,0 +1,13 @@
+---
+
+api:
+  insecure: true
+
+providers:
+  docker: {}
+
+accessLog: {}
+
+metrics:
+  prometheus: 
+    addServicesLabels: true
