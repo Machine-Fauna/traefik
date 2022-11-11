@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  traefik:
+  mf-traefik:
     image: traefik:2.9.4
-    container_name: traefik
+    container_name: mf-traefik
     command: --providers.docker=true
     restart: unless-stopped
     ports:
